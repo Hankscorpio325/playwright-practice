@@ -28,13 +28,6 @@ test('Test 3', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 });
 
-test('Buscar "iphone en mercadolibre"', async ({ page }) => {
-  await page.goto('https://www.mercadolibre.com.mx/')
-  await page.locator('input[id=\"cb1-edit"]').fill('iphone')
-  await page.keyboard.press('Enter')
-  await expect(page.locator('a.poly-component__link').first()).toBeVisible();
-  await page.pause();
-  });
 
 
   

@@ -1,0 +1,32 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Dtumangaonline%26oq%3Dtumangaonline%26gs_lcrp%3DEgZjaHJvbWUyBggAEEUYOdIBCDQxNTdqMGoyqAIAsAIB%26sourceid%3Dchrome%26ie%3DUTF-8%26sei%3DGpJqat6aDKyr0PEP8cfF-Qw&q=EhAoBgLwJIAd8R0yiqlykX2-GJqkqtMGIjD-YbnwNEcusMpxH_XWL-x2g53DiyUYGgrR3Go_MGwiyaSo_qSvyyydHr03ZGFLktMyAVJaAUM');
+  await page.locator('iframe[name="a-lvq9yypyu5rl"]').contentFrame().getByRole('checkbox', { name: 'I\'m not a robot' }).click();
+  await page.locator('iframe[name="c-lvq9yypyu5rl"]').contentFrame().locator('[id="4"]').click();
+  await page.locator('iframe[name="c-lvq9yypyu5rl"]').contentFrame().locator('[id="7"]').click();
+  await page.locator('iframe[name="c-lvq9yypyu5rl"]').contentFrame().locator('[id="0"]').click();
+  await page.locator('iframe[name="c-lvq9yypyu5rl"]').contentFrame().locator('[id="6"]').click();
+  await page.locator('iframe[name="c-lvq9yypyu5rl"]').contentFrame().getByRole('button', { name: 'Verify' }).click();
+  await page.locator('iframe[name="c-lvq9yypyu5rl"]').contentFrame().locator('[id="0"]').click();
+  await page.locator('iframe[name="c-lvq9yypyu5rl"]').contentFrame().locator('[id="7"]').click();
+  await page.locator('iframe[name="c-lvq9yypyu5rl"]').contentFrame().getByRole('button', { name: 'Verify' }).click();
+  await page.locator('iframe[name="c-lvq9yypyu5rl"]').contentFrame().locator('[id="2"]').click();
+  await page.locator('iframe[name="c-lvq9yypyu5rl"]').contentFrame().locator('[id="7"]').click();
+  await page.locator('iframe[name="c-lvq9yypyu5rl"]').contentFrame().locator('[id="5"]').click();
+  await page.locator('iframe[name="c-lvq9yypyu5rl"]').contentFrame().getByRole('button', { name: 'Verify' }).click();
+  await page.goto('https://www.elimparcial.com/');
+  await page.locator('span').filter({ hasText: 'Sonora' }).click();
+  await page.getByRole('button', { name: 'Permitir' }).click();
+  await page.locator('div:nth-child(5) > .ei-storyCard__StoryCardContainer-sc-1p4tdmu-0 > a').first().click();
+  await page.locator('[id="google_ads_iframe_/194056854/elimparcial.com/desktop_itt_0"]').contentFrame().getByRole('button', { name: 'Close ad' }).click();
+  await page.getByRole('heading', { name: '“Van a recibir una paliza”,' }).click();
+  await page.getByRole('img', { name: '“Van a recibir una paliza”,' }).click();
+  await page.getByText('AlimentosMéxico depende de').click();
+  await page.getByRole('img', { name: 'México depende de Medio' }).nth(1).click();
+  await page.getByText('Cada compra de maíz, jitomate').click();
+  await page.locator('.overlay-play-pause > svg > g > path:nth-child(2)').click();
+  await page.getByText('Los fertilizantes').nth(1).click();
+  await page.locator('.togglePlayPause > svg').click();
+  await page.locator('.togglePlayPause > svg').click();
+});

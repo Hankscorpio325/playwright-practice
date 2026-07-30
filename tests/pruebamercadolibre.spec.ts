@@ -33,8 +33,17 @@ test('Buscar "iphone en mercadolibre"', async ({ page }) => {
   await page.locator('input[id=\"cb1-edit"]').fill('iphone')
   await page.keyboard.press('Enter')
   await expect(page.locator('a.poly-component__link').first()).toBeVisible();
-  await page.pause();
+  
+
+  const titles = await page.locator('a.poly-component__title').allInnerTexts();
+  console.log('the total number of results is:', titles.length);
+
+  for (let title of titles) {
+    console.log('the title is: ', title);
+  }
   });
+  
+
 
 
   
