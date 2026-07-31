@@ -29,5 +29,14 @@ test('Test 3', async ({ page }) => {
 });
 
 
+test('Test 4', async ({ page }) => {
+  await page.goto ('https://www.mercadolibre.com.mx/');
+  awaitpage.getByRole  ('link', { name: 'Mis compras' }).click();
+  await page.pause()      
+});
+
+
+
+
 
   
