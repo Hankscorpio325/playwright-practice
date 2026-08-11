@@ -49,22 +49,17 @@ await page.getByRole('button', { name: 'Finish' }).click();
 
  await expect(page.getByRole('heading', { name: 'THANK YOU FOR YOUR ORDER' })).toBeVisible();
 
- await page.pause();
   console.log(`price: ${expectedPrice}, name: ${expectedName}, description: ${expectedDescription}`);
 });
 
 
 test('Otra compra', async ({ page }) => {
-  /*await page.goto('https://www.saucedemo.com/');
-  await page.getByRole('textbox', { name: 'Username' }).fill('standard_user');
-  await page.getByRole('textbox', { name: 'Password' }).fill('secret_sauce');
-  await page.getByRole('button', { name: 'Login' }).click();*/
+  await page.goto('https://www.saucedemo.com/');
   const loginpage = new LoginPage(page);
   await loginpage.fillUsername();
   await loginpage.fillPassword();
   await loginpage.clickOnLoginButton();
-     }
-    )
+});
 
     
     
