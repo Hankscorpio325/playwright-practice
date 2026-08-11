@@ -4,7 +4,12 @@ import { defineConfig, devices } from '@playwright/test';
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-// import dotenv from 'dotenv';
+ require('dotenv').config(
+  {
+    path: `.env.${process.env.NODE_ENV ? process.env.NODE_ENV : 'dev'}`
+    }
+
+ );
 // import path from 'path';
 // dotenv.config({ path: path.resolve(__dirname, '.env') });
 

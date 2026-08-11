@@ -20,3 +20,13 @@ test('test', async ({ page }) => {
   await page.locator('#comp-l0vicbf8').getByText('Politica de Privacidad').click();
   await page.locator('#comp-l0vicbf8').getByText('Politica de Privacidad').click();
 });
+
+
+
+
+
+
+test('navigate', async ({ page }) => {
+  await page.goto(process.env.URL || 'https://saucedemo.com');
+await page.pause()
+});
